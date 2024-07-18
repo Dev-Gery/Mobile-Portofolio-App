@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chart View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ChartViewController" customModule="Mobile_Portofolio_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VeW-p4-PxX">
+                                <rect key="frame" x="0.0" y="59" width="393" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyS-lb-khJ" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="383"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lyS-lb-khJ" secondAttribute="height" multiplier="393:383" id="xxU-8D-cd2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9r-al-3yD" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="391" width="393" height="383"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="x9r-al-3yD" secondAttribute="height" multiplier="393:383" id="5Si-G1-Ajp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VeW-p4-PxX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="163-Fn-DbJ"/>
+                            <constraint firstItem="VeW-p4-PxX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Suq-82-Lze"/>
+                            <constraint firstItem="VeW-p4-PxX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eGm-A9-UzA"/>
+                            <constraint firstAttribute="bottom" secondItem="VeW-p4-PxX" secondAttribute="bottom" constant="19" id="tDS-mJ-Ldx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DonutChartView" destination="lyS-lb-khJ" id="q6p-AO-Gdu"/>
+                        <outlet property="LineChartView" destination="x9r-al-3yD" id="1BP-L2-iDN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
